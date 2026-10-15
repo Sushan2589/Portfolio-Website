@@ -1,0 +1,7 @@
+import { ImageResponse } from "next/og";
+export const alt = "Sushan Dahal — Software developer and product builder from Kathmandu, Nepal.";
+export const size = { width: 1200, height: 630 };
+export const contentType = "image/png";
+export default function OpenGraphImage() {
+  return new ImageResponse(<div style={{ display: "flex", flexDirection: "column", width: "100%", height: "100%", background: "#fff", padding: "70px 80px", color: "#191919", fontFamily: "sans-serif" }}><div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 50 }}><div style={{ display: "flex", flexDirection: "column" }}><span style={{ fontSize: 76, fontWeight: 700, letterSpacing: "-4px" }}>hey, Sushan here.</span><span style={{ fontSize: 24, color: "#68686d", marginTop: 18 }}>building things from Kathmandu, Nepal</span></div><div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 145, height: 145, border: "2px solid #191919", borderRadius: "50%", background: "#f0f0ee", fontSize: 48, fontWeight: 700 }}>sd.</div></div><div style={{ display: "flex", marginTop: 58, fontSize: 26 }}><span style={{ background: "#ffe599", padding: "4px 8px" }}>Software developer</span><span style={{ padding: "4px 8px", color: "#68686d" }}>& product builder.</span></div><div style={{ display: "flex", borderTop: "1px solid #eaeaea", marginTop: "auto", paddingTop: 26, color: "#68686d", fontSize: 22 }}>Useful ideas. Thoughtful interfaces. Solid backends.</div></div>, size);
+}

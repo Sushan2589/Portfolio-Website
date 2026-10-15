@@ -1,0 +1,12 @@
+import { ArrowUpRight, Github } from "lucide-react";
+import { site } from "@/content/site";
+import { getContributions, githubUsername } from "@/lib/github";
+
+export async function GitHubActivity() {
+  const username = githubUsername(site.github);
+  const data = username ? await getContributions(username) : null;
+  const first = data?.days[0];
+  const start = first ? new Date(`${first.date}T00:00:00Z`).getTime() : 0;
+  const months = data?.days.filter((day, index, days) => index === 0 || day.date.slice(0, 7) !== days[index - 1].date.slice(0, 7));
+  return <section className="github-activity" aria-labelledby="github-title"><div className="github-heading"><h3 id="github-title"><Github size={14} /> GitHub contributions</h3>{username && <a href={site.github} target="_blank" rel="noopener noreferrer">@{username}<ArrowUpRight size={11} /></a>}</div>{data ? <figure className="contribution-figure"><svg className="contribution-graph" viewBox="0 0 775 130" role="img" aria-label={`${data.total !== null ? `${data.total.toLocaleString()} contributions` : "GitHub contribution activity"} in the last year. Visit the GitHub profile for the full calendar.`}>{months?.map(day => { const week = Math.floor((new Date(`${day.date}T00:00:00Z`).getTime() - start) / 604800000); return <text key={day.date} x={30 + week * 14} y="10" className="graph-month">{new Date(`${day.date}T00:00:00Z`).toLocaleDateString("en-US", { month: "short", timeZone: "UTC" })}</text>; })}{["Mon", "Wed", "Fri"].map((label, i) => <text key={label} x="0" y={38 + i * 28} className="graph-month">{label}</text>)}{data.days.map(day => { const date = new Date(`${day.date}T00:00:00Z`); const week = Math.floor((date.getTime() - start) / 604800000); return <rect key={day.date} x={30 + week * 14} y={19 + date.getUTCDay() * 14} width="10" height="10" rx="2" className={`contribution-cell level-${day.level}`}><title>{`${day.date}: ${day.label}`}</title></rect>; })}</svg><figcaption><span>{data.total !== null ? `${data.total.toLocaleString()} contributions in the last year` : "Public contribution activity"}</span><span className="contribution-legend">Less {Array.from({ length: 5 }, (_, level) => <i key={level} className={`level-${level}`} />)} More</span></figcaption></figure> : <div className="contribution-unavailable"><Github size={20} /><p>{username ? "The activity graph is taking a rain check." : "GitHub profile coming soon."}</p>{username && <a href={site.github} target="_blank" rel="noopener noreferrer">See my activity on GitHub <ArrowUpRight size={11} /></a>}</div>}</section>;
+}

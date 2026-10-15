@@ -1,0 +1,4 @@
+import { site } from "@/content/site";
+export function Avatar({ small = false }: { small?: boolean }) {
+  return <span className={`profile-avatar ${small ? "avatar-small" : ""}`} role="img" aria-label={`${site.name} monogram`}><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="57" fill="var(--avatar-bg)" stroke="var(--ink)" strokeWidth="1.2" /><circle cx="60" cy="60" r="51" fill="none" stroke="var(--ink)" strokeWidth=".5" opacity=".2" /><path d="M28 87c9-13 18-18 32-18s25 5 32 18" fill="none" stroke="var(--ink)" strokeWidth="1.2" opacity=".25" /><text x="60" y="68" textAnchor="middle" fontFamily="Inter,Arial,sans-serif" fontWeight="600" fontSize="34" letterSpacing="-2" fill="var(--ink)">sd.</text><path d="m91 20 3 6 6 2-6 3-3 6-2-6-6-3 6-2z" fill="var(--ink)" /></svg></span>;
+}
