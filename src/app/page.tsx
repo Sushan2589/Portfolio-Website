@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 import { ArrowRight, Code2, MapPin, MoveUpRight } from "lucide-react";
 import { Avatar } from "@/components/avatar";
 import { ProjectCard } from "@/components/project-card";
@@ -9,6 +9,8 @@ import { ExperienceTimeline } from "@/components/experience-timeline";
 import { BehindTheScenes } from "@/components/behind-the-scenes";
 import { projects, selectedWorkCount } from "@/content/projects";
 import { EmailButton } from "@/components/email-button";
+import { ResumeDownload } from "@/components/resume-download";
+import { Doomscroll } from "@/components/doomscroll";
 const principles = [
   {
     number: "01",
@@ -78,9 +80,11 @@ export default function Home() {
         </div>
         <div className="intro-actions">
           <EmailButton />
+          <ResumeDownload />
         </div>
         <SocialLinks />
       </section>
+      <Doomscroll />
       <section id="work" className="home-section" aria-labelledby="work-title">
         <div className="section-header">
           <div>
@@ -122,9 +126,11 @@ export default function Home() {
             technical work that makes it useful.
           </p>
           <p>
-            I’m drawn to backend development, practical experimentation, and
-            clear interfaces. SaaS, marketplaces, useful tools, and technology
-            opportunities in Nepal are a few things I keep coming back to.
+            My experience includes building application features for VIDYA,
+            co-building the National SXC Science Fest website, and supporting
+            technical events with the Computer Club at St. Xavier’s College.
+            I’ve also contributed to websites and community outreach through
+            NIAC and ICMB.
           </p>
         </div>
         <div className="principles" aria-label="How I approach building">

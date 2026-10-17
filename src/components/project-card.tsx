@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 import { ArrowUpRight, Code2, Github, Globe } from "lucide-react";
 import { ProjectMedia } from "@/components/project-media";
 import { isPublicLink } from "@/content/site";

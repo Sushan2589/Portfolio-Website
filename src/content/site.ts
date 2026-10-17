@@ -7,7 +7,8 @@ export const site = {
   email: "#linkhere",
   github: "https://github.com/Sushan2589",
   linkedin: "https://www.linkedin.com/in/sushan-dahal",
-  resume: "#linkhere",
+  // Replace public/resume.pdf to update the downloadable resume.
+  resume: "/resume.pdf",
   availability: "",
 } as const;
 

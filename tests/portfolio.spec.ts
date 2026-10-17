@@ -9,7 +9,7 @@ test("featured work leads to all projects and section navigation scrolls smoothl
   await page.goto("/");
   expect(await page.locator("html").evaluate(node => getComputedStyle(node).scrollBehavior)).toBe("smooth");
   await page.getByRole("navigation", { name: "Main navigation", exact: true }).getByRole("link", { name: "Contact" }).click();
-  await expect(page).toHaveURL(/#contact$/);
+  await expect(page).toHaveURL(/\/$/);
   await expect.poll(() => page.locator("#contact").evaluate(node => {
     const target = Math.min(node.getBoundingClientRect().top + scrollY - 24, document.documentElement.scrollHeight - innerHeight);
     return Math.abs(scrollY - target);
@@ -145,7 +145,7 @@ test("native details work with keyboard and mobile navigation with touch", async
   await page.locator(".mobile-menu summary").tap();
   await expect(page.getByRole("navigation", { name: "Mobile navigation" })).toBeVisible();
   await page.getByRole("navigation", { name: "Mobile navigation" }).getByRole("link", { name: "About" }).tap();
-  await expect(page).toHaveURL(/#about$/);
+  await expect(page).toHaveURL(/\/$/);
   const summary = page.locator(".principle summary").first();
   await summary.focus();
   await page.keyboard.press("Enter");

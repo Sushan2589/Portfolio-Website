@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, Braces, Database, Github, Globe, Layers, LockKeyhole } from "lucide-react";
 import { projects } from "@/content/projects";

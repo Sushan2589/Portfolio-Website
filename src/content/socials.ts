@@ -9,7 +9,7 @@ export const socialLinks: SocialLink[] = [
   { label: "GitHub", icon: "github", url: site.github },
   { label: "LinkedIn", icon: "linkedin", url: site.linkedin },
   { label: "Email", icon: "email", url: isEmail(site.email) ? `mailto:${site.email}` : "#linkhere" },
-  { label: "Résumé", icon: "resume", url: site.resume },
+  { label: "Resume", icon: "resume", url: site.resume },
   { label: "X", icon: "x", url: "#linkhere" },
   { label: "Instagram", icon: "instagram", url: "#linkhere" },
   { label: "YouTube", icon: "youtube", url: "#linkhere" },

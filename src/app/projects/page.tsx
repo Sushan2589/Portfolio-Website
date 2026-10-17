@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 import { ArrowLeft } from "lucide-react";
 import { ProjectCard } from "@/components/project-card";
 import { ContactPanel } from "@/components/contact-panel";

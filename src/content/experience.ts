@@ -1,113 +1,70 @@
-export type Experience = {
+﻿export type Experience = {
   organization: string;
   role: string;
-  period: string;
+  period?: string;
+  location?: string;
   summary: string;
   details?: string[];
   url?: string;
 };
 
-// Keep entries newest first. The first five show; the rest enter the archive.
-// Change this to 4 if you prefer a shorter initial timeline.
+// Show the five resume roles in their supplied order. Add dates when available.
 export const experiencePreviewCount = 5;
 
-// Add verified entries here. Dates and employment history are never invented.
-// { organization: "Organization", role: "Your role", period: "2025 – Present",
-//   summary: "A short description of your work.", details: ["One concrete contribution."],
-//   url: "https://example.com" }
 export const experience: Experience[] = [
   {
-    organization: "Your company or project",
-    role: "Your role",
-    period: "Jan 2025 – Present",
-    summary: "A short description of your work.",
-    details: [
-      "One meaningful contribution.",
-      "Another responsibility or achievement.",
-    ],
-    url: "https://example.com",
+    organization: "VIDYA",
+    role: "App Developer",
+    location: "Nepal",
+    summary: "Built application features using Bun, Next.js, and SQLite.",
   },
   {
-    organization: "Your company or project",
-    role: "Your role",
-    period: "Jan 2025 – Present",
-    summary: "A short description of your work.",
-    details: [
-      "One meaningful contribution.",
-      "Another responsibility or achievement.",
-    ],
-    url: "https://example.com",
+    organization: "National SXC Science Fest",
+    role: "App Developer",
+    location: "St. Xavier’s College",
+    summary: "Co-built the official registration and information website for the science fest.",
   },
   {
-    organization: "Your company or project",
-    role: "Your role",
-    period: "Jan 2025 – Present",
-    summary: "A short description of your work.",
-    details: [
-      "One meaningful contribution.",
-      "Another responsibility or achievement.",
-    ],
-    url: "https://example.com",
+    organization: "Computer Club",
+    role: "Executive",
+    location: "St. Xavier’s College",
+    summary: "Contributed to organizing and running technical events for the college’s Computer Club.",
   },
   {
-    organization: "Your company or project",
-    role: "Your role",
-    period: "Jan 2025 – Present",
-    summary: "A short description of your work.",
+    organization: "Nepal International ADR Center (NIAC)",
+    role: "Technical Support",
+    location: "Nepal",
+    summary: "Supported website improvements, event design, and email marketing campaigns.",
     details: [
-      "One meaningful contribution.",
-      "Another responsibility or achievement.",
+      "Worked on polishing and refining NIAC’s website.",
+      "Assisted with event banner design and email marketing campaigns.",
     ],
-    url: "https://example.com",
   },
   {
-    organization: "Your company or project",
-    role: "Your role",
-    period: "Jan 2025 – Present",
-    summary: "A short description of your work.",
+    organization: "ICMB",
+    role: "Co-editor & Technical Support",
+    location: "Nepal",
+    summary: "Helped build and maintain the website and supported community outreach.",
     details: [
-      "One meaningful contribution.",
-      "Another responsibility or achievement.",
+      "Helped build and maintain the ICMB website.",
+      "Supported the technical aspects of outreach, including teaching children and running tech-awareness events.",
     ],
-    url: "https://example.com",
-  },
-  {
-    organization: "Your company or project",
-    role: "Your role",
-    period: "Jan 2025 – Present",
-    summary: "A short description of your work.",
-    details: [
-      "One meaningful contribution.",
-      "Another responsibility or achievement.",
-    ],
-    url: "https://example.com",
-  },
-  {
-    organization: "Your company or project",
-    role: "Your role",
-    period: "Jan 2025 – Present",
-    summary: "A short description of your work.",
-    details: [
-      "One meaningful contribution.",
-      "Another responsibility or achievement.",
-    ],
-    url: "https://example.com",
-  },
-  {
-    organization: "Your company or project",
-    role: "Your role",
-    period: "Jan 2025 – Present",
-    summary: "A short description of your work.",
-    details: [
-      "One meaningful contribution.",
-      "Another responsibility or achievement.",
-    ],
-    url: "https://example.com",
   },
 ];
 
+export const competitions = [
+  { name: "PCPS Hack4Impact", result: "Winner", detail: "Fund My Vision" },
+  { name: "BNKS National Hackathon", result: "Runner-up", detail: "GameEDU" },
+  { name: "ACEM Arambha Hackathon", result: "Selected", detail: "The only +2-level team selected" },
+];
+
+export const education = [
+  { institution: "St. Xavier’s College, Maitighar", qualification: "NEB, Grades 11–12", period: "2024–2026", location: "Kathmandu, Nepal" },
+  { institution: "VS Niketan H.S. School", qualification: "Through Grade 10", location: "Tinkune, Nepal" },
+];
+
 export const stack = [
-  { label: "Interfaces", tools: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
-  { label: "Backend & data", tools: ["Node.js", "Hono", "Express", "PostgreSQL", "Drizzle"] },
-  { label: "Practices", tools: ["Authentication", "Validation", "Testing", "Deployment"] },
+  { label: "Interfaces", tools: ["React", "Next.js", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS"] },
+  { label: "Backend & data", tools: ["Node.js", "Express.js", "Bun", "PHP", "MongoDB", "SQLite", "Hono", "PostgreSQL", "Drizzle"] },
+  { label: "Tools & integrations", tools: ["Git", "GitHub", "REST APIs", "Khalti Payment Integration"] },
 ];

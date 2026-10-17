@@ -1,6 +1,7 @@
-import Link from "next/link";
+import { NavigationLink as Link } from "@/components/navigation-link";
 import { ArrowUp } from "lucide-react";
 import { isPublicLink, site } from "@/content/site";
+import { ResumeDownload } from "@/components/resume-download";
 export function Footer() {
   return (
     <footer className="site-footer page-width">
@@ -31,11 +32,7 @@ export function Footer() {
               LinkedIn 
             </a>
           )}
-          {isPublicLink(site.resume) && (
-            <a href={site.resume} target="_blank" rel="noopener noreferrer">
-              Résumé 
-            </a>
-          )}
+          <ResumeDownload compact />
           <Link href="#top">
             Back to top <ArrowUp size={11} />
           </Link>
