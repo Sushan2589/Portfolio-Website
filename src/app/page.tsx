@@ -11,6 +11,8 @@ import { projects, selectedWorkCount } from "@/content/projects";
 import { EmailButton } from "@/components/email-button";
 import { ResumeDownload } from "@/components/resume-download";
 import { Doomscroll } from "@/components/doomscroll";
+import { StructuredData } from "@/components/structured-data";
+import { profileSchema } from "@/lib/structured-data";
 const principles = [
   {
     number: "01",
@@ -37,6 +39,7 @@ const principles = [
 export default function Home() {
   return (
     <main id="main" className="page-width">
+      <StructuredData data={profileSchema()} />
       <section className="intro" aria-labelledby="intro-title">
         <div className="intro-heading">
           <div>

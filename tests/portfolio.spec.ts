@@ -130,7 +130,7 @@ test("timeline fill follows scroll rather than elapsed time", async ({ page }) =
 });
 test("simplified hero action and configured social icons", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("link", { name: "Email me", exact: true })).toHaveAttribute("href", "mailto:me");
+  await expect(page.getByRole("link", { name: "Email me", exact: true })).toHaveAttribute("href", "mailto:sushandahal06@gmail.com");
   await expect(page.getByRole("link", { name: "Explore my work" })).toHaveCount(0);
   await expect(page.getByRole("link", { name: "A little about me" })).toHaveCount(0);
   await expect(page.getByText("Elsewhere on the internet")).toHaveCount(0);
@@ -229,8 +229,8 @@ test("links, missing assets, and long text", async ({ page, request }) => {
     else if (href.startsWith("/")) expect((await request.get(href.split("#")[0] || "/")).ok()).toBe(true);
   }
   await expect(page.locator(".illustration-label")).toHaveText(["INTERFACE ILLUSTRATION", "INTERFACE ILLUSTRATION"]);
-  await expect(page.getByRole("link", { name: "Start a conversation", exact: true })).toHaveAttribute("href", "mailto:me");
-  await expect(page.getByRole("button", { name: "Copy email address" })).toHaveCount(0);
+  await expect(page.getByRole("link", { name: /Start a conversation/ })).toHaveAttribute("href", "mailto:sushandahal06@gmail.com");
+  await expect(page.getByRole("button", { name: "Copy email address" })).toHaveCount(1);
   await page.locator(".project-card-body > p").first().evaluate(node => { node.textContent = "A longer project description about practical applications and thoughtful development. ".repeat(8); });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   expect((await request.get("/work/unknown-project")).status()).toBe(404);

@@ -17,7 +17,7 @@ export function ContactPanel() {
     <h2 id="contact-title" className="marked-heading">Have a useful problem to solve?</h2>
     <p>I’d love to hear what you’re working on.</p>
     <div className="contact-buttons">
-      <a className="contact-pill" href={isEmail(site.email) ? `mailto:${site.email}` : "mailto:me"} aria-label="Start a conversation"><Avatar small /> Start a conversation<span className="status-dot decorative-motion" aria-hidden="true" /></a>
+      <a className="contact-pill" href={`mailto:${site.email}`}><Avatar small /> Start a conversation<span className="status-dot decorative-motion" aria-hidden="true" /></a>
       {isEmail(site.email) && <button type="button" className="copy-email" aria-label="Copy email address" onClick={copy}>{state === "copied" ? <Check size={14} /> : <Copy size={14} />}</button>}
     </div>
     <span className="copy-feedback" role="status">{state === "copied" ? "Email copied." : state === "failed" ? "Couldn’t copy. Use the email link instead." : ""}</span>

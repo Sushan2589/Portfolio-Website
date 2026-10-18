@@ -48,7 +48,7 @@ export const projects: Project[] = [
     summary: "A hackathon project connecting ideators and investors through role-based workflows, KYC, and chat.",
     role: "Backend developer", status: "PCPS Hack4Impact winner", statusConfirmed: true,
     challenge: "Making roles, KYC workflows, and conversations understandable within one product experience.",
-    technologies: ["Node.js", "Express.js", "React"], repo: "https://my-project.com", demo: "https://my-project.com",
+    technologies: ["Node.js", "Express.js", "React"], repo: "#linkhere", demo: "#linkhere",
     problem: "Ideators and investors need a shared place to discover opportunities and start a conversation. Their goals differ, so the product needs to clarify each person's role and the steps required to participate.",
     contribution: "I built the backend using Node.js and Express.js, with a React frontend. The project connects early-stage ideators with investors through role-based workflows, KYC, and chat.",
     approach: ["Frame the experience around the different needs of ideators and investors.", "Make KYC workflow states clear in the user journey, without representing workflow completion as a guarantee of trust.", "Bring conversations into the product so discovery can lead to a direct exchange."],

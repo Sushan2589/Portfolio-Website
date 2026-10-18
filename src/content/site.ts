@@ -2,9 +2,9 @@ export const site = {
   name: "Sushan Dahal",
   location: "Kathmandu, Nepal",
   description: "Software developer and product builder in Kathmandu, Nepal. Thoughtful web applications, practical experiments, and the thinking behind them.",
-  // Replace these placeholders. Missing/placeholder values never render as links.
-  url: "#linkhere",
-  email: "#linkhere",
+  // Replace these values if your public contact or profile details change.
+  url: "https://sushandahal.com.np",
+  email: "sushandahal06@gmail.com",
   github: "https://github.com/Sushan2589",
   linkedin: "https://www.linkedin.com/in/sushan-dahal",
   // Replace public/resume.pdf to update the downloadable resume.
