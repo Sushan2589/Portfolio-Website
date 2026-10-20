@@ -10,7 +10,7 @@ import { BehindTheScenes } from "@/components/behind-the-scenes";
 import { projects, selectedWorkCount } from "@/content/projects";
 import { EmailButton } from "@/components/email-button";
 import { ResumeDownload } from "@/components/resume-download";
-import { Doomscroll } from "@/components/doomscroll";
+// import { Doomscroll } from "@/components/doomscroll";
 import { StructuredData } from "@/components/structured-data";
 import { profileSchema } from "@/lib/structured-data";
 const principles = [
@@ -87,7 +87,7 @@ export default function Home() {
         </div>
         <SocialLinks />
       </section>
-      <Doomscroll />
+      {/* <Doomscroll /> */}
       <section id="work" className="home-section" aria-labelledby="work-title">
         <div className="section-header">
           <div>
